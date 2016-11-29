@@ -25,4 +25,8 @@ class Place
     end
     array.join()
   end
+
+  define_singleton_method(:clear) do
+    @@all = []
+  end
 end
