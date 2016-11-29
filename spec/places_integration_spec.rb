@@ -10,4 +10,10 @@ describe('sends user input to output page', {:type => :feature}) do
     click_button('Submit!')
     expect(page).to have_content("Tokyo")
   end
+
+    it('clears the user places when button is clicked') do
+    visit ('/')
+    click_button('Clear List')
+    expect(page).to have_content("")
+  end
 end

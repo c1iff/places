@@ -8,6 +8,12 @@ get('/') do
   erb(:index)
 end
 
+get('/clear') do
+  Place.clear()
+  @places = Place.all()
+  erb(:index)
+end
+
 get('/place_form') do
   user_place = params.fetch("new_place")
   @new_place = Place.new(user_place)
